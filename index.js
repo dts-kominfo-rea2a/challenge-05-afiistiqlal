@@ -14,11 +14,25 @@ const sorter = (arr, sort) => {
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
-const sortAscending = (arr) => { return arr.sort() };
+const sortAscending = (arr) => { 
+  const hasil = [];
+  const sorted = arr.sort();
+  for (let index = 0; index < sorted.length; index++) {
+    hasil.push(index+1 +". " + arr[index]);
+  }
+  return hasil;
+};
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
-const sortDescending = (arr) => { return arr.reverse() };
+const sortDescending = (arr) => { 
+  const hasil = [];
+  const sorted = arr.reverse();
+  for (let index = 0; index < sorted.length; index++) {
+    hasil.push(index+1 +". " + arr[index]);
+  }
+  return hasil;
+};
 
 // ! JANGAN DIMODIFIKASI
 (function main() {
